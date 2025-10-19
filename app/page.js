@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
     <header className={classes.header}>
-      <div className={classes.slideShow}>
+      <div className={classes.slideshow}>
         <ImageSlideshow />
       </div>
       <div>
