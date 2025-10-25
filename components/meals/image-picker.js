@@ -15,7 +15,10 @@ export default function ImagePicker({ label, name}) {
     function handleImagePick(event) {
         const file = event.target.files[0];
 
-        if (!file) return;
+        if (!file) {
+            setPickedImage(null);
+            return;
+        }
 
         const fileReader = new FileReader();
 
@@ -41,6 +44,7 @@ export default function ImagePicker({ label, name}) {
                 className={classes.input}
                 ref={inputRef}
                 onChange={handleImagePick}
+                required
             />
             <button type="button" className={classes.button} onClick={handlePckClick}>Upload</button>
         </div>
